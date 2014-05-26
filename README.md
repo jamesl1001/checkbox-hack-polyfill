@@ -1,4 +1,4 @@
 checkbox-hack-polyfill
 ======================
 
-A Javascript polyfill for the few browsers which don't support the checkbox hack
+A Javascript polyfill for the checkbox hack in IE 7-8.
