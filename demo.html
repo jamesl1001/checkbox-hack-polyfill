@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="A Javascript polyfill for the checkbox hack in IE 7-8"/>
+    <meta name="description" content="A Javascript polyfill for the checkbox hack in IE 5-8"/>
     <meta name="author" content="JaL Productions"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <title>Checkbox Hack Polyfill</title>
@@ -15,7 +15,7 @@
             user-select: none;
         }
 
-        #toggle {
+        #toggle-checkbox {
             display: none;
         }
 
@@ -25,14 +25,25 @@
             padding: 10px;
         }
 
-        #toggle:checked ~ #toggle-me {
+        #toggle-checkbox:checked ~ #toggle-me {
             display: none;
         }
     </style>
+
+
+    <!--[if lt IE 9]>
+    <style>
+        .checkbox--checked #toggle-me {
+            display: none;
+        }
+    </style>
+    <script src="checkboxHackPolyfill.js"></script>
+    <script>checkboxHackPolyfill('toggle-label');</script>
+    <![endif]-->
 </head>
 <body>
-    <label for="toggle" id="toggle-label">Show / Hide</label>
-    <input type="checkbox" id="toggle"/>
+    <label for="toggle-checkbox" id="toggle-label">Show / Hide</label>
+    <input type="checkbox" id="toggle-checkbox"/>
 
     <div id="toggle-me">Toggle Me</div>
 </body>
