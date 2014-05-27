@@ -12,11 +12,11 @@ If the original code is something like so:
 <head>
     <style>
         #toggle-me {
-            display: inline;
+            display: none;
         }
 
         #toggle-checkbox:checked ~ #toggle-me {
-            display: none;
+            display: block;
         }
     </style>
 </head>
@@ -35,7 +35,7 @@ Add the following conditional statement to the `<head>`:
 <!--[if lt IE 9]>
 <style>
     .checkbox--checked #toggle-me {
-        display: none;
+        display: block;
     }
 </style>
 <script src="checkboxHackPolyfill.js"></script>

@@ -7,12 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <title>Checkbox Hack Polyfill</title>
     <style>
+        body {
+            background: #69C;
+            margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        #wrapper {
+            width: 200px;
+            height: 130px;
+            margin-top: -65px;
+            margin-left: -100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
         #toggle-label {
+            width: 180px;
+            height: 40px;
             background: #EEE;
+            display: block;
+            margin-bottom: 10px;
             padding: 10px;
             cursor: pointer;
             -webkit-user-select: none;
             user-select: none;
+            text-align: center;
+            line-height: 40px;
         }
 
         #toggle-checkbox {
@@ -20,20 +42,24 @@
         }
 
         #toggle-me {
+            width: 180px;
+            height: 40px;
             background: #CCC;
-            display: inline;
+            display: none;
             padding: 10px;
+            text-align: center;
+            line-height: 40px;
         }
 
         #toggle-checkbox:checked ~ #toggle-me {
-            display: none;
+            display: block;
         }
     </style>
 
     <!--[if lt IE 9]>
     <style>
         .checkbox--checked #toggle-me {
-            display: none;
+            display: block;
         }
     </style>
     <script src="checkboxHackPolyfill.js"></script>
@@ -41,9 +67,11 @@
     <![endif]-->
 </head>
 <body>
-    <label for="toggle-checkbox" id="toggle-label">Show / Hide</label>
-    <input type="checkbox" id="toggle-checkbox"/>
+    <div id="wrapper">
+        <label for="toggle-checkbox" id="toggle-label">Show / Hide</label>
+        <input type="checkbox" id="toggle-checkbox"/>
 
-    <div id="toggle-me">Toggle Me</div>
+        <div id="toggle-me">Why hello there!</div>
+    </div>
 </body>
 </html>
