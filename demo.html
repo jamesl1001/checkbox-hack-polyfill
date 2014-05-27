@@ -9,8 +9,28 @@
     <style>
         body {
             background: #69C;
-            margin: 0;
             font-family: Helvetica, Arial, sans-serif;
+            color: #333;
+            text-align: center;
+        }
+
+        a {
+            border-bottom: 1px solid #333;
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #EEE;
+            color: #EEE;
+        }
+
+        #footer {
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
         }
 
         #wrapper {
@@ -23,32 +43,34 @@
             left: 50%;
         }
 
-        #toggle-label {
+        #toggle-label,
+        #toggle-me {
             width: 180px;
             height: 40px;
+            padding: 10px;
+            line-height: 40px;
+        }
+
+        #toggle-label {
             background: #EEE;
             display: block;
             margin-bottom: 10px;
-            padding: 10px;
             cursor: pointer;
             -webkit-user-select: none;
             user-select: none;
-            text-align: center;
-            line-height: 40px;
+        }
+
+        #toggle-label:hover {
+            background-color: #CCC;
+        }
+
+        #toggle-me {
+            background: #CCC;
+            display: none;
         }
 
         #toggle-checkbox {
             display: none;
-        }
-
-        #toggle-me {
-            width: 180px;
-            height: 40px;
-            background: #CCC;
-            display: none;
-            padding: 10px;
-            text-align: center;
-            line-height: 40px;
         }
 
         #toggle-checkbox:checked ~ #toggle-me {
@@ -67,11 +89,17 @@
     <![endif]-->
 </head>
 <body>
+    <h1>checkbox-hack-polyfill</h1>
+
     <div id="wrapper">
         <label for="toggle-checkbox" id="toggle-label">Show / Hide</label>
         <input type="checkbox" id="toggle-checkbox"/>
 
         <div id="toggle-me">Why hello there!</div>
+    </div>
+
+    <div id="footer">
+        <a href="http://jalproductions.co.uk" target="_blank">&copy; JaL Productions 2014</a> &mdash; <a href="https://github.com/jamesl1001/checkbox-hack-polyfill" target="_blank">Github</a>
     </div>
 </body>
 </html>
