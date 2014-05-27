@@ -38,7 +38,7 @@ Add the following conditional statement to the `<head>`:
         display: block;
     }
 </style>
-<script src="checkboxHackPolyfill.js"></script>
+<script src="checkboxHackPolyfill.min.js"></script>
 <script>checkboxHackPolyfill('toggle-label');</script>
 <![endif]-->
 ```
