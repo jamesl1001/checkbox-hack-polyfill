@@ -1,6 +1,6 @@
 #checkbox-hack-polyfill
 
-A Javascript polyfill for the checkbox hack in IE 5-8.
+A Javascript polyfill for the checkbox hack in IE5, IE7 and IE8.
 
 ###Usage
 
